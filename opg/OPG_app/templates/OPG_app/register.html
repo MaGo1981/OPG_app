@@ -1,0 +1,85 @@
+{% extends "OPG_app/bottom.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Register"%}
+{% endblock %}
+
+
+{% block register %}
+<div class="col" style="margin:2%">
+</div>
+
+
+<div class="col-4" style="margin:4%;">
+    <div style="border:none">
+
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <table class="table table-sm" style="border:solid black; padding:15px">
+                <tbody>
+                <tr>
+                    <td colspan="3" style="border-left:solid black; border-right:solid black;"><br></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="first_name">{% trans "Name:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input type="text" class="form-control" id="first_name" name="first_name"   style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="last_name">{% trans "Last Name:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input type="text" class="form-control" id="last_name" name="last_name"style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="opg_name">{% trans "Agricultural Subject Name:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input type="text" class="form-control" id="opg_name" name="opg_name"style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="address">{% trans "Address:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input type="text" class="form-control" id="address" name="address"style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="phone">{% trans "Phone:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input type="text" class="form-control" id="phone" name="phone"style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="username">{% trans "Email (Username):"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input type="email" class="form-control" id="username" name="username"style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="email">{% trans "Confirm Email:"%}</label</td>
+                    <td colspan="2" style="padding-right:15px"><input type="email" class="form-control" id="email" name="email"style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="phone">{% trans "Password:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                           class="form-control"
+                                           id="password" name="password"style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="border-left:solid black; border-right:solid black;"><br></td>
+                </tr>
+                <table>
+                    <tbody>
+
+                    <tr>
+                        <td colspan="3"><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><button type="submit" class="btn btn-outline-dark">{% trans "Create User"%}</button>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                </tbody>
+            </table>
+
+    </div>
+</div>
+
+</form>
+
+<div class="col" style="margin:2%">
+</div>
+{% endblock %}

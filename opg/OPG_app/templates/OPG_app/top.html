@@ -1,0 +1,45 @@
+{% extends "OPG_app/base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block title %}
+
+{% endblock %}
+
+{% block navbar_logo %}
+
+<div class="row full-height">
+    <div class="col" style="margin:1% 4% 1% 4%">
+        <h1>
+            <img src="{% static '/OPG_app/img/opg.png' %}" class="rounded float-left" alt="Logo">
+        </h1>
+    </div>
+
+
+    {% block navbar %}
+    {% if nav %}
+    <div class="col-6" style="margin:2%;">
+        <ul class="nav nav-pills" style="border: solid black">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'products' %}" style="color:black;">{% trans "Products"%}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'profile' %}" style="color:black;">{% trans "Profile"%}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}" style="color:black;">{% trans "Logout"%}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col" style="margin:1% 4% 1% 4%">
+    </div>
+    {% endif %}
+    {% endblock %}
+
+
+</div>
+{% endblock %}
+
+{% block message %}
+{% endblock %}

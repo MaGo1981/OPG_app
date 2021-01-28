@@ -1,0 +1,51 @@
+{% extends "OPG_app/bottom.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Product List"%}
+{% endblock %}
+
+{% block message %}
+{% endblock %}
+
+
+{% block products %}
+<div class="col" style="margin:2%">
+</div>
+
+
+<div class="col-6" style="margin:4%;">
+    <table class="table table-striped" style="border-bottom:solid black">
+        <thead>
+        <tr>
+            <td style="border-bottom:solid black"></td>
+            <td style="border-bottom:solid black"></td>
+            <td style="border-bottom:solid black"></td>
+            <td style="border-bottom:solid black">
+                <button type="button" class="btn btn-outline-dark">
+                    <a href="product/add">{% trans "Add Product"%}</a>
+                </button>
+            </td>
+        </tr>
+        <tr style="border-left:solid black; border-right:solid black">
+            <th scope="col">{% trans "Product Name"%}</th>
+            <th scope="col">{% trans "Product Category"%}</th>
+            <th scope="col">{% trans "Details"%}</th>
+            <th scope="col">{% trans "Delete"%}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+        <tr style="border-left:solid black; border-right:solid black">
+            <td>{{ product.name }}</td>
+            <td>{{ product.category }}</td>
+            <td><a class="nav-link active" <button href="{% url 'edit_product' product.id %}">{% trans "Details"%}</button></td>
+            <td><a class="nav-link active" <button href="{% url 'del_product' product.id %}" method="POST" onclick="return confirm('Da li zaista želite izbrisati proizvod?');">{% trans "Delete"%}</button></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="col" style="margin:2%">
+</div>
+{% endblock %}

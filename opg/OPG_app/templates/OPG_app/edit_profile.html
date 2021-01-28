@@ -1,0 +1,88 @@
+{% extends "OPG_app/bottom.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Edit Profile"%}
+{% endblock %}
+
+
+{% block edit_profile %}
+<div class="col" style="margin:2%">
+</div>
+
+
+<div class="col-6" style="margin:4%;">
+    <div style="border:none">
+
+        <form action="{% url 'edit_profile' %}" method="post">
+            {% csrf_token %}
+            <table class="table table-sm" style="border:solid black; padding:15px">
+                <tbody>
+                <tr>
+                    <td colspan="4" style="border-left:solid black; border-right:solid black;"><br></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="first_name">{% trans "Name:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input placeholder="{{ user_basic.first_name }}"
+                                                                      type="text" class="form-control" id="first_name"
+                                                                      name="first_name" style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="last_name">{% trans "Last Name:"%}</label>
+                    </td>
+                    <td colspan="2" style="padding-right:15px"><input placeholder="{{ user_basic.last_name }}"
+                                                                      type="text" class="form-control" id="last_name"
+                                                                      name="last_name" style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="opg_name">{% trans "Agricultural Subject Name:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px">
+                        <select class="form-control" name="opg_name" id="opg_name" style="border:solid black">
+                            {% for user in users %}
+                                <option value="{{ user.opg_id.id }}">
+                                    {{ user.opg_id}}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="address">{% trans "Address:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input placeholder="{{ user.address }}" type="text"
+                                                                      class="form-control" id="address" name="address"
+                                                                      style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="phone">{% trans "Phone:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input placeholder="{{ user.phone }}" type="text"
+                                                                      class="form-control" id="phone" name="phone"
+                                                                      style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="border-left:solid black; border-right:solid black;"><br></td>
+                </tr>
+                <table>
+                    <tbody>
+
+                    <tr>
+                        <td colspan="3"><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <button type="submit" class="btn btn-outline-dark">{% trans "Edit"%}</button>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+
+
+<div class="col" style="margin:2%">
+</div>
+{% endblock %}

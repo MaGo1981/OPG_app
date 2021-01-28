@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-28 18:59+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+#: OPG_app/templates/OPG_app/add_product.html:5
+#: OPG_app/templates/OPG_app/products.html:26
+msgid "Add Product"
+msgstr "Dodaj proizvod"
+
+#: OPG_app/templates/OPG_app/add_product.html:25
+#: OPG_app/templates/OPG_app/product.html:25
+msgid "Product Name:"
+msgstr "Ime proizvoda:"
+
+#: OPG_app/templates/OPG_app/add_product.html:30
+#: OPG_app/templates/OPG_app/product.html:30
+msgid "Product Category:"
+msgstr "Kategorija proizvoda"
+
+#: OPG_app/templates/OPG_app/add_product.html:46
+msgid "Create Product"
+msgstr "Kreiraj proizvod"
+
+#: OPG_app/templates/OPG_app/edit_profile.html:5
+#: OPG_app/templates/OPG_app/profile.html:62
+msgid "Edit Profile"
+msgstr "Editiranje profila"
+
+#: OPG_app/templates/OPG_app/edit_profile.html:25
+#: OPG_app/templates/OPG_app/profile.html:20
+#: OPG_app/templates/OPG_app/register.html:25
+msgid "Name:"
+msgstr "Ime:"
+
+#: OPG_app/templates/OPG_app/edit_profile.html:31
+#: OPG_app/templates/OPG_app/profile.html:26
+#: OPG_app/templates/OPG_app/register.html:29
+msgid "Last Name:"
+msgstr "Prezime:"
+
+#: OPG_app/templates/OPG_app/edit_profile.html:38
+#: OPG_app/templates/OPG_app/profile.html:32
+#: OPG_app/templates/OPG_app/register.html:33
+msgid "Agricultural Subject Name:"
+msgstr "Naziv OPG-a:"
+
+#: OPG_app/templates/OPG_app/edit_profile.html:50
+#: OPG_app/templates/OPG_app/profile.html:38
+#: OPG_app/templates/OPG_app/register.html:37
+msgid "Address:"
+msgstr "Adresa:"
+
+#: OPG_app/templates/OPG_app/edit_profile.html:56
+#: OPG_app/templates/OPG_app/profile.html:45
+#: OPG_app/templates/OPG_app/profile.html:51
+#: OPG_app/templates/OPG_app/register.html:41
+msgid "Phone:"
+msgstr "Telefon:"
+
+#: OPG_app/templates/OPG_app/edit_profile.html:72
+msgid "Edit"
+msgstr "Editiraj"
+
+#: OPG_app/templates/OPG_app/index.html:5
+msgid "Welcome"
+msgstr "Dobrodosli"
+
+#: OPG_app/templates/OPG_app/index.html:48
+#: OPG_app/templates/OPG_app/login.html:5
+#: OPG_app/templates/OPG_app/login.html:42
+msgid "Login"
+msgstr "Login"
+
+#: OPG_app/templates/OPG_app/index.html:55
+#: OPG_app/templates/OPG_app/register.html:5
+msgid "Register"
+msgstr "Registracija"
+
+#: OPG_app/templates/OPG_app/login.html:25
+msgid "Username:"
+msgstr "Korisničko ime:"
+
+#: OPG_app/templates/OPG_app/login.html:30
+#: OPG_app/templates/OPG_app/register.html:53
+msgid "Password:"
+msgstr "Lozinka:"
+
+#: OPG_app/templates/OPG_app/product.html:5
+msgid "Edit Product"
+msgstr "Editiranje proizvoda"
+
+#: OPG_app/templates/OPG_app/product.html:46
+msgid "Update"
+msgstr "Ažuriraj"
+
+#: OPG_app/templates/OPG_app/products.html:5
+msgid "Product List"
+msgstr "Pregled proizvoda"
+
+#: OPG_app/templates/OPG_app/products.html:31
+msgid "Product Name"
+msgstr "Naziv proizvoda"
+
+#: OPG_app/templates/OPG_app/products.html:32
+msgid "Product Category"
+msgstr "Kategorija proizvoda"
+
+#: OPG_app/templates/OPG_app/products.html:33
+#: OPG_app/templates/OPG_app/products.html:42
+msgid "Details"
+msgstr "Detalji"
+
+#: OPG_app/templates/OPG_app/products.html:34
+#: OPG_app/templates/OPG_app/products.html:43
+msgid "Delete"
+msgstr "Brisanje"
+
+#: OPG_app/templates/OPG_app/profile.html:5
+#: OPG_app/templates/OPG_app/top.html:28
+msgid "Profile"
+msgstr "Profil"
+
+#: OPG_app/templates/OPG_app/register.html:45
+msgid "Email (Username):"
+msgstr "Email (korisničko ime)"
+
+#: OPG_app/templates/OPG_app/register.html:49
+msgid "Confirm Email:"
+msgstr "Potvrda emaila"
+
+#: OPG_app/templates/OPG_app/register.html:68
+msgid "Create User"
+msgstr "Kreiraj korisnika"
+
+#: OPG_app/templates/OPG_app/top.html:25
+msgid "Products"
+msgstr "Proizvodi"
+
+#: OPG_app/templates/OPG_app/top.html:31
+msgid "Logout"
+msgstr "Odjava"
+
+#: OPG_app/views.py:18
+msgid "Welcome to agricultural application!"
+msgstr "Dobrodošli u OPG aplikaciju"
+
+#: OPG_app/views.py:22 OPG_app/views.py:36 OPG_app/views.py:144
+#: OPG_app/views.py:155 OPG_app/views.py:168
+msgid "You are not logged in. Please login!"
+msgstr "Niste logirani. Molimo logirajte se!"
+
+#: OPG_app/views.py:40
+msgid "Product does not exist!"
+msgstr "Proizvod ne postoji."
+
+#: OPG_app/views.py:63 OPG_app/views.py:79
+msgid "Registration did not succeed due to input error, please repeat input!"
+msgstr "Registracija nije uspjela zbog greške pri unosu, molimo ponovite unos!"
+
+#: OPG_app/views.py:82
+msgid "Registration of new user and agricultural subject"
+msgstr "Registracija novog korisnika i OPG-a"
+
+#: OPG_app/views.py:94
+msgid "Login did not succeed due to input error, please repeat input!"
+msgstr "Registracija nije uspjela zbog greške pri unosu, molimo ponovite unos!"
+
+#: OPG_app/views.py:118
+msgid "Please enter the name of the product you want to create!"
+msgstr "Molimo unesite ime proizvoda koji želite kreirati!"

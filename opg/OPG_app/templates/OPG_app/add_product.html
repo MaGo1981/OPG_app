@@ -1,0 +1,61 @@
+{% extends "OPG_app/bottom.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Add Product"%}
+{% endblock %}
+
+
+{% block add_product %}
+<div class="col" style="margin:2%">
+</div>
+
+
+<div class="col-6" style="margin:4%;">
+    <div style="border:none">
+
+        <form action="{% url 'add_product'%}" method="post">
+            {% csrf_token %}
+            <table class="table table-sm" style="border:solid black; padding:15px">
+                <tbody>
+                <tr>
+                    <td colspan="4" style="border-left:solid black; border-right:solid black;"><br></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="product">{% trans "Product Name:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px"><input type="text" class="form-control" id="product"
+                                                                      name="product" style="border:solid black"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left:15px"><label for="product_category">{% trans "Product Category:"%}</label></td>
+                    <td colspan="2" style="padding-right:15px">
+                        <select class="form-control" name="product_category" id="product_category" style="border:solid black">
+                                            {% for product in products %}
+                                            <option value="{{ product.category.id }}">
+                                                {{ product.category}}
+                                            </option>
+                                            {% endfor %}
+                                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="border-left:solid black; border-right:solid black;"><br></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="padding-left:15px">
+                        <button ype="submit" class="btn btn-outline-dark">{% trans "Create Product"%}</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="border-left:solid black; border-right:solid black;"><br></td>
+                </tr>
+                </tbody>
+            </table>
+    </div>
+</div>
+
+</form>
+
+<div class="col" style="margin:2%">
+</div>
+{% endblock %}

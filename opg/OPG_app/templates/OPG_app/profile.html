@@ -1,0 +1,77 @@
+{% extends "OPG_app/bottom.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Profile"%}
+{% endblock %}
+
+
+{% block profile %}
+<div class="col" style="margin:2%">
+</div>
+<div class="col-6" style="margin:4%;">
+    <div style="border:none">
+        <table class="table table-sm" style="border:solid black; padding:15px">
+            <tbody>
+            <tr>
+                <td colspan="4" style="border-left:solid black; border-right:solid black;"><br></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="padding-left:15px"><label>{% trans "Name:"%}</label></td>
+                <td colspan="1" style="padding-right:15px">{{ user.user.first_name }}</td>
+                <td colspan="1" style="padding-right:15px"></td>
+                <td colspan="1" style="padding-right:15px"></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="padding-left:15px"><label>{% trans "Last Name:"%}</label></td>
+                <td colspan="1" style="padding-right:15px">{{ user.user.last_name }}</td>
+                <td colspan="1" style="padding-right:15px"></td>
+                <td colspan="1" style="padding-right:15px"></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="padding-left:15px"><label>{% trans "Agricultural Subject Name:"%}</label></td>
+                <td colspan="1" style="padding-right:15px">{{ user.opg_id }}</td>
+                <td colspan="1" style="padding-right:15px"></td>
+                <td colspan="1" style="padding-right:15px"></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="padding-left:15px"><label>{% trans "Address:"%}</label></td>
+                <td colspan="1" style="padding-right:15px">{{ user.address }}</td>
+                <td colspan="1" style="padding-right:15px"></td>
+                <td colspan="1" style="padding-right:15px"></td>
+
+            </tr>
+            <tr>
+                <td colspan="1" style="padding-left:15px"><label>{% trans "Phone:"%}</label></td>
+                <td colspan="1" style="padding-right:15px">{{ user.phone }}</td>
+                <td colspan="1" style="padding-right:15px"></td>
+                <td colspan="1" style="padding-right:15px"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="color: white;border-left:solid black;"><label>{% trans "Phone:"%}</label></td>
+                <td colspan="2" style="color: white;border-right:solid black;">{{ user.phone }}</td>
+            </tr>
+            <table>
+                <tbody>
+
+                <tr>
+                    <td colspan="3"><br></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <a class="btn btn-outline-dark" href="{% url 'edit_profile' %}">{% trans "Edit Profile"%}</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="col" style="margin:2%">
+</div>
+{% endblock %}

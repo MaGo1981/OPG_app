@@ -1,0 +1,101 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'OPG_app/normalize.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+html, body {
+  height: 100%;
+  margin: 5px;
+}
+
+a {
+  color: black;
+}
+
+
+.full-height {
+  height: 15%;
+  background: white;
+}
+
+.full-height1 {
+  height: 10%;
+  background: white;
+}
+
+.full-height2 {
+  height: 75%;
+  background: white;
+}
+
+td, tr, th, div {
+
+    border-bottom: none;
+}
+
+
+h1,h2 {
+  text-align: center;
+}
+
+    </style>
+
+
+</head>
+<body>
+{% block body %}
+    {% block navbar_logo %}
+
+        {% block navbar %}
+        {% endblock %}
+
+    {% endblock %}
+
+
+    {% block message %}
+    {% endblock %}
+
+
+    {% block data %}
+
+        {% block welcome_index %}
+        {% endblock %}
+
+        {% block buttons_index %}
+        {% endblock %}
+
+        {% block products %}
+        {% endblock %}
+
+        {% block register %}
+        {% endblock %}
+
+        {% block edit_profile %}
+        {% endblock %}
+
+        {% block login %}
+        {% endblock %}
+
+        {% block profile %}
+        {% endblock %}
+
+        {% block product %}
+        {% endblock %}
+
+        {% block add_product %}
+        {% endblock %}
+
+    {% endblock %}
+{% endblock %}
+</body>
+</html>

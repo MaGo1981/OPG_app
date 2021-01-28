@@ -1,0 +1,25 @@
+{% extends "OPG_app/top.html" %}
+{% load i18n %}
+
+{% block title %}
+{% endblock %}
+
+
+{% block message %}
+<div class="row full-height1">
+    <div class="col" style="margin:1% 6% 1% 4%">
+    </div>
+    <div class="col-6" style="margin:1%">
+        {% if message %}
+        <h1 style="text-align: left;">
+            {{ message }}
+        </h1>
+        {% endif %}
+    </div>
+    <div class="col" style="margin:1% 6% 1% 4%">
+    </div>
+</div>
+{% endblock %}
+
+{% block data %}
+{% endblock %}
