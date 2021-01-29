@@ -30,9 +30,9 @@
                     <td colspan="2" style="padding-left:15px"><label for="product_category">{% trans "Product Category:"%}</label></td>
                     <td colspan="2" style="padding-right:15px">
                         <select class="form-control" name="product_category" id="product_category" style="border:solid black">
-                                            {% for product in products %}
-                                            <option value="{{ product.category.id }}">
-                                                {{ product.category}}
+                                            {% for category in categories %}
+                                            <option value="{{ category.id }}">
+                                                {{ category}}
                                             </option>
                                             {% endfor %}
                                         </select>

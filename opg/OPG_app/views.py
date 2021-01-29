@@ -40,7 +40,7 @@ def product(request, product_id):
         raise Http404(_("Product does not exist!"))
     context = {
         "product": product,
-        "products": Product.objects.all().distinct('category'),
+        "categories": ProductCategory.objects.all().distinct('name'),
         "message": "Editing Product",
         "nav": True,
     }
@@ -119,7 +119,7 @@ def add_product(request):
     else:
         context = {
             "message": "Create Product",
-            "products": Product.objects.all().distinct('category'),
+            "categories": ProductCategory.objects.all().distinct('name'),
             "nav": True,
         }
         return render(request, "OPG_app/add_product.html",context)
