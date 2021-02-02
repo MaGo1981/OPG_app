@@ -141,7 +141,7 @@ def edit_product(request, product_id):
 
 def del_product(request, product_id):
     if not request.user.is_authenticated:
-        return render(request, "orders/index.html", {"message": _("You are not logged in. Please login!"), "nav":False})
+        return render(request, "OPG_app/index.html", {"message": _("You are not logged in. Please login!"), "nav":False})
     if request.method == 'GET':
         try:
             Product.objects.get(pk=product_id).delete()
@@ -152,7 +152,7 @@ def del_product(request, product_id):
 def profile(request):
     if not request.user.is_authenticated:
         form = AuthenticationForm()
-        return render(request, "orders/login.html", {"message": _("You are not logged in. Please login!"), 'form':form})
+        return render(request, "OPG_app/login.html", {"message": _("You are not logged in. Please login!"), 'form':form})
 
     context = {
         "user": request.user.profile,
@@ -165,7 +165,7 @@ def profile(request):
 def edit_profile(request):
     if not request.user.is_authenticated:
         form = AuthenticationForm()
-        return render(request, "orders/login.html", {"message": _("You are not logged in. Please login!"), 'form':form})
+        return render(request, "OPG_app/login.html", {"message": _("You are not logged in. Please login!"), 'form':form})
 
     if request.method == 'POST':
 

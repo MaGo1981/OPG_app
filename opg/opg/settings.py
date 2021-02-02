@@ -89,6 +89,9 @@ DATABASES = {
         'HOST': 'localhost',
         'PASSWORD': 'python',
         'PORT': 5432,
+        'TEST': {
+                    'NAME': 'test_opg_app',
+                },
     }
 }
 
