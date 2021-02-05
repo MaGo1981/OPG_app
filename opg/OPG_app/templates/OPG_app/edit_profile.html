@@ -23,14 +23,14 @@
                 </tr>
                 <tr>
                     <td colspan="2" style="padding-left:15px"><label for="first_name">{% trans "Name:"%}</label></td>
-                    <td colspan="2" style="padding-right:15px"><input placeholder="{{ user_basic.first_name }}"
+                    <td colspan="2" style="padding-right:15px"><input value="{{ user_basic.first_name }}"
                                                                       type="text" class="form-control" id="first_name"
                                                                       name="first_name" style="border:solid black"></td>
                 </tr>
                 <tr>
                     <td colspan="2" style="padding-left:15px"><label for="last_name">{% trans "Last Name:"%}</label>
                     </td>
-                    <td colspan="2" style="padding-right:15px"><input placeholder="{{ user_basic.last_name }}"
+                    <td colspan="2" style="padding-right:15px"><input value="{{ user_basic.last_name }}"
                                                                       type="text" class="form-control" id="last_name"
                                                                       name="last_name" style="border:solid black"></td>
                 </tr>
@@ -48,13 +48,13 @@
                 </tr>
                 <tr>
                     <td colspan="2" style="padding-left:15px"><label for="address">{% trans "Address:"%}</label></td>
-                    <td colspan="2" style="padding-right:15px"><input placeholder="{{ user.address }}" type="text"
+                    <td colspan="2" style="padding-right:15px"><input value="{{ user.address }}" type="text"
                                                                       class="form-control" id="address" name="address"
                                                                       style="border:solid black"></td>
                 </tr>
                 <tr>
                     <td colspan="2" style="padding-left:15px"><label for="phone">{% trans "Phone:"%}</label></td>
-                    <td colspan="2" style="padding-right:15px"><input placeholder="{{ user.phone }}" type="text"
+                    <td colspan="2" style="padding-right:15px"><input value="{{ user.phone }}" type="text"
                                                                       class="form-control" id="phone" name="phone"
                                                                       style="border:solid black"></td>
                 </tr>
