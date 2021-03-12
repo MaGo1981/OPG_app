@@ -11,6 +11,7 @@ __pycache__/
 build/
 dist/
 downloads/
+htmlcov/
 django2/
 db.sqlite3
 eggs/
@@ -41,6 +42,7 @@ pip-delete-this-directory.txt
 
 # Unit test / coverage reports
 htmlcov/
+opg_environment/
 .tox/
 .nox/
 .coverage

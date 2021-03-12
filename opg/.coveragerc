@@ -1,0 +1,7 @@
+
+[run]
+source= .
+omit=*/opg_environment/*,*/migrations/*,tests.py
+
+[report]
+omit=*/opg_environment/*,*/migrations/*,tests.py
