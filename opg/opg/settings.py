@@ -11,6 +11,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import environ
+
+ENV=environ.Env(
+    #set casting default value
+    DEBUG=(bool,True)
+)
+# reading .env file
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +33,7 @@ SECRET_KEY = 'ged#_p8r4n5)n431qo^&et_%loe(&55w-%it=9x&iqxx!op+bm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ENV('ALLOWED_HOSTS').split(',')
 
 
 # Application definition
@@ -84,13 +92,13 @@ WSGI_APPLICATION = 'opg.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'opg_app',
-        'USER': 'postgres',
-        'HOST': 'localhost',
-        'PASSWORD': 'python',
-        'PORT': 5432,
+        'NAME': ENV('DATABASE_NAME'),
+        'USER': ENV('DATABASE_USER'),
+        'HOST': ENV('DATABASE_HOST'),
+        'PASSWORD': ENV('DATABASE_PASSWORD'),
+        'PORT': ENV('DATABASE_PORT'),
         'TEST': {
-                    'NAME': 'test_opg_app',
+                    'NAME': ENV('TEST_DATABASE_NAME'),
                 },
     }
 }
